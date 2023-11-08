@@ -1,6 +1,3 @@
-Original App Design Project - README Template
-===
-
 # FocusFarm
 
 ## Table of Contents
@@ -53,6 +50,8 @@ FocusFarm is a minimalistic pomodoro timer app that allows users to build a farm
 * Detail view for each animal
 * Track if user leaves app and if so animal doesnt hatch
 * Payment system (user agrees to if they dont complete the study session __ dollars will be donated to ___)
+* Add different color eggs
+  
 
 ### 2. Screen Archetypes
 
