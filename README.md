@@ -84,11 +84,10 @@ FocusFarm is a minimalistic pomodoro timer app that allows users to build a farm
 
 ## Wireframes
 
-[Add picture of your hand sketched wireframes in this section]
 ![wireframe](https://github.com/JacobMartinage/FocusFarm/assets/62039158/b27ef4e1-1d5e-4027-8b5a-e2bab8dd6457)
 
 
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+
 
 ### [BONUS] Digital Wireframes & Mockups
 
