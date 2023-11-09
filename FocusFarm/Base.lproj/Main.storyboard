@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qWW-g3-QXf">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Timer-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FocusFarm" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,26 +16,144 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7dw-W0-DxW">
-                                <rect key="frame" x="159" y="137" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="StageFour" translatesAutoresizingMaskIntoConstraints="NO" id="LKo-8U-gZ1">
+                                <rect key="frame" x="64.666666666666686" y="79" width="264" height="292"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="292" id="XDB-s4-S1t"/>
+                                    <constraint firstAttribute="height" constant="292" id="fhz-em-69s"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="264" id="kSu-SL-cfE"/>
+                                    <constraint firstAttribute="width" constant="264" id="rBx-C0-9Lk"/>
+                                </constraints>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="5" maxValue="120" translatesAutoresizingMaskIntoConstraints="NO" id="SqN-l9-ORh">
+                                <rect key="frame" x="54" y="507.66666666666674" width="285" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="281" id="Amb-28-JgT"/>
+                                    <constraint firstAttribute="height" constant="30" id="qAb-qB-ssC"/>
+                                </constraints>
+                                <color key="minimumTrackTintColor" systemColor="linkColor"/>
+                                <color key="maximumTrackTintColor" systemColor="systemPinkColor"/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 : 00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z6m-5Y-T46">
+                                <rect key="frame" x="96" y="381" width="201" height="96.666666666666686"/>
+                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="79"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iDF-hQ-hEF">
+                                <rect key="frame" x="56" y="557.66666666666663" width="281" height="48.666666666666629"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="281" id="rac-ZP-X3X"/>
+                                    <constraint firstAttribute="height" constant="48.670000000000002" id="tdt-HB-aeh"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Start">
+                                    <fontDescription key="titleFontDescription" name="Copperplate" family="Copperplate" pointSize="34"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fIv-91-LDe">
+                                <rect key="frame" x="56" y="618.33333333333337" width="281" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="281" id="E5T-Mu-cT1"/>
+                                    <constraint firstAttribute="height" constant="35" id="FUT-Kg-bBl"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="End Early :(">
+                                    <fontDescription key="titleFontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
+                                </buttonConfiguration>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Warning: If you hit &quot;end early&quot; your egg will not hatch and not reward you with an animal" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MlC-VF-xhR">
+                                <rect key="frame" x="56" y="654.33333333333337" width="281" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="281" id="6W6-pX-rVT"/>
+                                    <constraint firstAttribute="height" constant="28" id="DlD-ah-hZo"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="28" id="Qn7-sW-qgq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LKo-8U-gZ1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="ARb-sz-ZP9"/>
+                            <constraint firstItem="LKo-8U-gZ1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BD5-OE-PiE"/>
+                            <constraint firstItem="iDF-hQ-hEF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KGk-Ca-4a3"/>
+                            <constraint firstItem="MlC-VF-xhR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PKm-s3-Pr0"/>
+                            <constraint firstItem="MlC-VF-xhR" firstAttribute="top" secondItem="fIv-91-LDe" secondAttribute="bottom" constant="1" id="Sym-AV-WtR"/>
+                            <constraint firstItem="z6m-5Y-T46" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VLe-t8-EjS"/>
+                            <constraint firstItem="SqN-l9-ORh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZgB-oD-1xy"/>
+                            <constraint firstItem="iDF-hQ-hEF" firstAttribute="top" secondItem="SqN-l9-ORh" secondAttribute="bottom" constant="20" id="d24-4e-LdP"/>
+                            <constraint firstItem="fIv-91-LDe" firstAttribute="top" secondItem="iDF-hQ-hEF" secondAttribute="bottom" constant="12" id="fCS-9x-bax"/>
+                            <constraint firstItem="fIv-91-LDe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jak-PH-2Y9"/>
+                            <constraint firstItem="z6m-5Y-T46" firstAttribute="top" secondItem="LKo-8U-gZ1" secondAttribute="bottom" constant="10" id="ktr-tY-v0l"/>
+                            <constraint firstItem="iDF-hQ-hEF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oZk-c3-mgm"/>
+                            <constraint firstItem="SqN-l9-ORh" firstAttribute="top" secondItem="z6m-5Y-T46" secondAttribute="bottom" constant="30" id="rHy-iW-bmV"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Timer" image="clock" catalog="system" id="LQZ-VN-GJt"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="127" y="4"/>
+            <point key="canvasLocation" x="1052.6717557251909" y="3.5211267605633805"/>
+        </scene>
+        <!--Farm-->
+        <scene sceneID="XxD-aR-Veg">
+            <objects>
+                <viewController id="ygg-sh-MMm" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OT9-NF-PIY">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="vI8-aU-NhE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Farm" image="pawprint.circle" catalog="system" id="qpr-mI-PzF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="58e-u0-kdJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1895.4198473282443" y="3.5211267605633805"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="juR-Ks-OZa">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="qWW-g3-QXf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Nb0-VQ-zL3">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="syw-3Q-JMY"/>
+                        <segue destination="ygg-sh-MMm" kind="relationship" relationship="viewControllers" id="EJp-bX-1yl"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gXI-mv-0oH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="125.95419847328243" y="3.5211267605633805"/>
         </scene>
     </scenes>
     <resources>
+        <image name="StageFour" width="646" height="896"/>
+        <image name="clock" catalog="system" width="128" height="123"/>
+        <image name="pawprint.circle" catalog="system" width="128" height="123"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
