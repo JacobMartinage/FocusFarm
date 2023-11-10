@@ -35,27 +35,32 @@ FocusFarm is a minimalistic pomodoro timer app that allows users to build a farm
 
 **Required Must-have Stories**
 
-* Tiner screen
-* Timer is able to be changed (beteen 10 and 120 minutes or something similar)
-* Timer is able to be started and stopped
-* Timer going off adds an animal to the "farm"
-* Farm screen that has a table of the obtained animals
+- [x] Tiner screen
+- [ ] Timer is able to be changed (beteen 10 and 120 minutes or something similar)
+- [ ] Timer is able to be started and stopped
+- [ ] Timer going off adds an animal to the "farm"
+- [x] Farm screen that has a table of the obtained animals
 
   
 
 **Optional Nice-to-have Stories**
 
-* 3D Interactive farm with users animals
-* 3D model for each animal
-* Detail view for each animal
-* Track if user leaves app and if so animal doesnt hatch
-* Payment system (user agrees to if they dont complete the study session __ dollars will be donated to ___)
-* Add different color eggs
+- [ ] 3D Interactive farm with users animals
+- [ ]3D model for each animal
+- [ ] Detail view for each animal
+- [ ] Track if user leaves app and if so animal doesnt hatch
+- [ ] Payment system (user agrees to if they dont complete the study session __ dollars will be donated to ___)
+- [ ] Add different color eggs
+
+##Current Progress
+- Successfully designed the "front end" of both the timer screen and the farm screen, but none of the back end is working yet (slider not connected to timer, timer not timering, etc..)
+- Obtained and edited images of each stage of egg cracking (which will change as timer goes down)
   
+
 
 ### 2. Screen Archetypes
 
-- [ ] Timer page
+- [x] Timer page
 * Timer
 * Ability to change amount of time for timer
 * timer is able to be started and stopped
