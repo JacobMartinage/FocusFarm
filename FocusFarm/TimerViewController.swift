@@ -59,6 +59,7 @@ class TimerViewController: UIViewController {
     
     func runTimer() {
         initialTime = seconds
+        timerSlider.isUserInteractionEnabled = false
         isTimerRunning = true;
          timer = Timer.scheduledTimer(timeInterval: 1, target: self,   selector: (#selector(TimerViewController.updateTimer)), userInfo: nil, repeats: true)
     }
@@ -97,6 +98,7 @@ class TimerViewController: UIViewController {
     
     @IBAction func resetButtonTapped(_ sender: UIButton) {
         isTimerRunning = false
+        timerSlider.isUserInteractionEnabled = true
         updateEggImage(i: 0)
         timer.invalidate()
         seconds = Int(60*timerSlider.value)
