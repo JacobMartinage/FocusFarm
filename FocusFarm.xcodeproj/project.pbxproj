@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5303E3CF2AFBED2900C5B254 /* fullEgg.png in Resources */ = {isa = PBXBuildFile; fileRef = 5303E3CE2AFBED2900C5B254 /* fullEgg.png */; };
+		53192C0D2AFF4B92008D9694 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53192C0C2AFF4B92008D9694 /* TimerViewController.swift */; };
 		53E9E3902AF2FC8E0003E33F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E9E38F2AF2FC8E0003E33F /* AppDelegate.swift */; };
 		53E9E3922AF2FC8E0003E33F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E9E3912AF2FC8E0003E33F /* SceneDelegate.swift */; };
 		53E9E3942AF2FC8E0003E33F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E9E3932AF2FC8E0003E33F /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 		53E9E3A72AF2FC8F0003E33F /* FocusFarmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E9E3A62AF2FC8F0003E33F /* FocusFarmTests.swift */; };
 		53E9E3B12AF2FC8F0003E33F /* FocusFarmUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E9E3B02AF2FC8F0003E33F /* FocusFarmUITests.swift */; };
 		53E9E3B32AF2FC8F0003E33F /* FocusFarmUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E9E3B22AF2FC8F0003E33F /* FocusFarmUITestsLaunchTests.swift */; };
+		53FECCE82AFC9884004DD593 /* AnimalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FECCE72AFC9884004DD593 /* AnimalCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		5303E3CE2AFBED2900C5B254 /* fullEgg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fullEgg.png; path = ../../../Downloads/fullEgg.png; sourceTree = "<group>"; };
+		53192C0C2AFF4B92008D9694 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		53E9E38C2AF2FC8E0003E33F /* FocusFarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FocusFarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53E9E38F2AF2FC8E0003E33F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53E9E3912AF2FC8E0003E33F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +54,7 @@
 		53E9E3AC2AF2FC8F0003E33F /* FocusFarmUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FocusFarmUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		53E9E3B02AF2FC8F0003E33F /* FocusFarmUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusFarmUITests.swift; sourceTree = "<group>"; };
 		53E9E3B22AF2FC8F0003E33F /* FocusFarmUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusFarmUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		53FECCE72AFC9884004DD593 /* AnimalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,8 @@
 				53E9E38F2AF2FC8E0003E33F /* AppDelegate.swift */,
 				53E9E3912AF2FC8E0003E33F /* SceneDelegate.swift */,
 				53E9E3932AF2FC8E0003E33F /* ViewController.swift */,
+				53192C0C2AFF4B92008D9694 /* TimerViewController.swift */,
+				53FECCE72AFC9884004DD593 /* AnimalCell.swift */,
 				53E9E3952AF2FC8E0003E33F /* Main.storyboard */,
 				53E9E3982AF2FC8E0003E33F /* Assets.xcassets */,
 				5303E3CE2AFBED2900C5B254 /* fullEgg.png */,
@@ -262,7 +268,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53192C0D2AFF4B92008D9694 /* TimerViewController.swift in Sources */,
 				53E9E3942AF2FC8E0003E33F /* ViewController.swift in Sources */,
+				53FECCE82AFC9884004DD593 /* AnimalCell.swift in Sources */,
 				53E9E3902AF2FC8E0003E33F /* AppDelegate.swift in Sources */,
 				53E9E3922AF2FC8E0003E33F /* SceneDelegate.swift in Sources */,
 			);

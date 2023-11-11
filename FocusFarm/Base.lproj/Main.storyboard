@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qWW-g3-QXf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
@@ -11,12 +11,12 @@
         <!--Timer-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FocusFarm" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="TimerViewController" customModule="FocusFarm" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="StageFour" translatesAutoresizingMaskIntoConstraints="NO" id="LKo-8U-gZ1">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fullEgg 1" translatesAutoresizingMaskIntoConstraints="NO" id="LKo-8U-gZ1">
                                 <rect key="frame" x="64.666666666666686" y="79" width="264" height="292"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="292" id="XDB-s4-S1t"/>
@@ -25,23 +25,14 @@
                                     <constraint firstAttribute="width" constant="264" id="rBx-C0-9Lk"/>
                                 </constraints>
                             </imageView>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="5" maxValue="120" translatesAutoresizingMaskIntoConstraints="NO" id="SqN-l9-ORh">
-                                <rect key="frame" x="54" y="507.66666666666674" width="285" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="281" id="Amb-28-JgT"/>
-                                    <constraint firstAttribute="height" constant="30" id="qAb-qB-ssC"/>
-                                </constraints>
-                                <color key="minimumTrackTintColor" systemColor="linkColor"/>
-                                <color key="maximumTrackTintColor" systemColor="systemPinkColor"/>
-                            </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 : 00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z6m-5Y-T46">
-                                <rect key="frame" x="96" y="381" width="201" height="96.666666666666686"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00 : 15 : 00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z6m-5Y-T46">
+                                <rect key="frame" x="31.666666666666657" y="381" width="329.66666666666674" height="97"/>
                                 <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="79"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iDF-hQ-hEF">
-                                <rect key="frame" x="56" y="557.66666666666663" width="281" height="48.666666666666629"/>
+                                <rect key="frame" x="56" y="558" width="281" height="48.666666666666629"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="281" id="rac-ZP-X3X"/>
                                     <constraint firstAttribute="height" constant="48.670000000000002" id="tdt-HB-aeh"/>
@@ -51,9 +42,12 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Start">
                                     <fontDescription key="titleFontDescription" name="Copperplate" family="Copperplate" pointSize="34"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="startButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v5c-HC-3tw"/>
+                                </connections>
                             </button>
                             <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fIv-91-LDe">
-                                <rect key="frame" x="56" y="618.33333333333337" width="281" height="35"/>
+                                <rect key="frame" x="56" y="618.66666666666663" width="281" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="281" id="E5T-Mu-cT1"/>
                                     <constraint firstAttribute="height" constant="35" id="FUT-Kg-bBl"/>
@@ -63,9 +57,12 @@
                                 <buttonConfiguration key="configuration" style="filled" title="End Early :(">
                                     <fontDescription key="titleFontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="resetButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MaB-uj-xhW"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Warning: If you hit &quot;end early&quot; your egg will not hatch and not reward you with an animal" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MlC-VF-xhR">
-                                <rect key="frame" x="56" y="654.33333333333337" width="281" height="28"/>
+                                <rect key="frame" x="56" y="654.66666666666663" width="281" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="281" id="6W6-pX-rVT"/>
                                     <constraint firstAttribute="height" constant="28" id="DlD-ah-hZo"/>
@@ -75,6 +72,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="15" minValue="5" maxValue="90" translatesAutoresizingMaskIntoConstraints="NO" id="SqN-l9-ORh">
+                                <rect key="frame" x="54" y="500" width="285" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="281" id="Amb-28-JgT"/>
+                                    <constraint firstAttribute="height" constant="30" id="qAb-qB-ssC"/>
+                                </constraints>
+                                <color key="minimumTrackTintColor" systemColor="systemGreenColor"/>
+                                <color key="maximumTrackTintColor" systemColor="systemIndigoColor"/>
+                                <color key="thumbTintColor" systemColor="systemGreenColor"/>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="RQB-58-DY3"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -95,6 +105,13 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Timer" image="clock" catalog="system" id="LQZ-VN-GJt"/>
+                    <connections>
+                        <outlet property="eggImage" destination="LKo-8U-gZ1" id="gvQ-CT-8Rp"/>
+                        <outlet property="endButton" destination="fIv-91-LDe" id="75A-KV-3KL"/>
+                        <outlet property="startButton" destination="iDF-hQ-hEF" id="MXv-zh-FDv"/>
+                        <outlet property="timerLabel" destination="z6m-5Y-T46" id="vhD-EA-cfZ"/>
+                        <outlet property="timerSlider" destination="SqN-l9-ORh" id="eEv-d2-M09"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -107,6 +124,47 @@
                     <view key="view" contentMode="scaleToFill" id="OT9-NF-PIY">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="6eu-Sn-OEH">
+                                <rect key="frame" x="7" y="59" width="393" height="710"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="96" id="8YJ-Bq-JhW" customClass="AnimalCell" customModule="FocusFarm" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="96"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8YJ-Bq-JhW" id="93p-jI-HjZ" customClass="AnimalCell" customModule="FocusFarm" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="96"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jRq-Tv-xfp">
+                                                    <rect key="frame" x="11" y="0.0" width="124" height="96"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Animal Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JRU-7P-JEN">
+                                                    <rect key="frame" x="143" y="0.0" width="243" height="24"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="21"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Animal Description, lorem ipsum b;agh blag blah blah blah blah blah blah balh blah balh blah" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NLn-L3-7K9">
+                                                    <rect key="frame" x="143" y="11" width="230" height="85"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="AnimalImage" destination="jRq-Tv-xfp" id="JeA-YW-CS7"/>
+                                            <outlet property="AnimalName" destination="JRU-7P-JEN" id="rDT-ry-gdT"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vI8-aU-NhE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -137,20 +195,17 @@
         </scene>
     </scenes>
     <resources>
-        <image name="StageFour" width="646" height="896"/>
         <image name="clock" catalog="system" width="128" height="123"/>
+        <image name="fullEgg 1" width="650" height="850"/>
         <image name="pawprint.circle" catalog="system" width="128" height="123"/>
-        <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
