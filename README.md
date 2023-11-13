@@ -36,9 +36,9 @@ FocusFarm is a minimalistic pomodoro timer app that allows users to build a farm
 **Required Must-have Stories**
 
 - [x] Tiner screen
-- [ ] Timer is able to be changed (beteen 10 and 120 minutes or something similar)
-- [ ] Timer is able to be started and stopped
-- [ ] Timer going off adds an animal to the "farm"
+- [x] Timer is able to be changed (beteen 10 and 120 minutes or something similar)
+- [x] Timer is able to be started and stopped
+- [x] Timer going off adds an animal to the "farm"
 - [x] Farm screen that has a table of the obtained animals
 
   
@@ -55,6 +55,12 @@ FocusFarm is a minimalistic pomodoro timer app that allows users to build a farm
 ##Current Progress
 - Successfully designed the "front end" of both the timer screen and the farm screen, but none of the back end is working yet (slider not connected to timer, timer not timering, etc..)
 - Obtained and edited images of each stage of egg cracking (which will change as timer goes down)
+- Slider properly adjusts timer label as well as the back end seconds, and the timer properly counts down
+- Timer is able to be started and stopped, and when timer is running the slider gets locked so that you cant change its time
+- Egg images now correctly progress as the timer gets lower (full at the start, then 1 crack, then 2 cracks, etc..)
+- Succesfully connected the TimerViewController to the FarmViewController and made it so that when the timer hits zero, a random animal is generated (currently just 1/4 possible choices), and then added to the table in the FarmViewController
+  
+
   
 
 
@@ -65,7 +71,7 @@ FocusFarm is a minimalistic pomodoro timer app that allows users to build a farm
 * Ability to change amount of time for timer
 * timer is able to be started and stopped
 
-- [ ] Farm page
+- [x] Farm page
 * Table of all of the animals
 
 
@@ -77,14 +83,6 @@ FocusFarm is a minimalistic pomodoro timer app that allows users to build a farm
 * Farm
 
 
-**Flow Navigation** (Screen to Screen)
-
-- [ ] [list first screen here]
-* [list screen navigation here]
-* ...
-- [ ] [list second screen here]
-* [list screen navigation here]
-* ...
 
 ## Wireframes
 
