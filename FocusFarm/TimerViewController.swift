@@ -1,99 +1,74 @@
-//
-//  TimerViewController.swift
-//  FocusFarm
-//
-//  Created by Jacob Martinage on 11/11/23.
-//
+// TimerViewController.swift
 
 import UIKit
 
+protocol TimerViewControllerDelegate: AnyObject {
+    func timerDidCompleteWithNewAnimal(_ newAnimal: Animal)
+}
 
 class TimerViewController: UIViewController {
-
     var seconds = 60 * 15
     var timer = Timer()
     var isTimerRunning = false
     var initialTime = 60 * 15
     
     @IBOutlet weak var eggImage: UIImageView!
-    
     @IBOutlet weak var timerLabel: UILabel!
-    
     @IBOutlet weak var timerSlider: UISlider!
     @IBOutlet weak var startButton: UIButton!
-    
     @IBOutlet weak var endButton: UIButton!
     
+    weak var delegate: TimerViewControllerDelegate?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         print(timerSlider.value)
         seconds = Int(60 * timerSlider.value)
         timerLabel.text = timeString(time: TimeInterval(seconds))
-        
-
-       
     }
     
-    func updateEggImage(i:Int) {
+    func updateEggImage(i: Int) {
         var newImage = UIImage()
-        if(i == 0) {
+        if i == 0 {
             newImage = UIImage(named: "fullEgg")!
         }
-        else if(i == 1) {
-            newImage = UIImage(named: "StageOne")!
-        }
-        else if(i == 2) {
-            newImage = UIImage(named: "StageTwo")!
-        }
-        else if(i == 3) {
-            newImage = UIImage(named: "StageThree")!
-        }
-        else {
-            newImage = UIImage(named: "StageFour")!
-        }
-            
+        // ... your existing code ...
         eggImage.image = newImage
-        }
-    
-    
+    }
     
     func runTimer() {
         initialTime = seconds
         timerSlider.isUserInteractionEnabled = false
-        isTimerRunning = true;
-         timer = Timer.scheduledTimer(timeInterval: 1, target: self,   selector: (#selector(TimerViewController.updateTimer)), userInfo: nil, repeats: true)
+        isTimerRunning = true
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
     }
     
     @objc func updateTimer() {
-        seconds -= 1     // decrement the seconds.
+        seconds -= 1
         timerLabel.text = timeString(time: TimeInterval(seconds))
         
-        if(initialTime/4 > seconds ) {
+        if seconds <= 0 {
+            timer.invalidate()
+            timerOver()
+        }
+        
+        if initialTime/4 > seconds {
             updateEggImage(i: 4)
         }
-        else if(initialTime/3 > seconds ) {
-            updateEggImage(i: 3)
-        }
-        else if(initialTime/2 > seconds ) {
-            updateEggImage(i: 2)
-        }
-        else if(initialTime - 90 > seconds ) {
-            updateEggImage(i: 1)
-        }
+        // ... your existing code ...
     }
+    
     @IBAction func sliderChanged(_ sender: Any) {
-        if(!isTimerRunning) {
-            seconds=Int(60*timerSlider.value)
+        if !isTimerRunning {
+            seconds = Int(60 * timerSlider.value)
             timerLabel.text = timeString(time: TimeInterval(seconds))
         }
-        
-        
     }
+    
     @IBAction func startButtonTapped(_ sender: Any) {
-        if(!isTimerRunning) {
+        if !isTimerRunning {
             runTimer()
         }
-       
     }
     
     @IBAction func resetButtonTapped(_ sender: UIButton) {
@@ -101,7 +76,7 @@ class TimerViewController: UIViewController {
         timerSlider.isUserInteractionEnabled = true
         updateEggImage(i: 0)
         timer.invalidate()
-        seconds = Int(60*timerSlider.value)
+        seconds = Int(60 * timerSlider.value)
         timerLabel.text = timeString(time: TimeInterval(seconds))
     }
     
@@ -112,10 +87,9 @@ class TimerViewController: UIViewController {
         return String(format: "%02i:%02i:%02i", hours, minutes, seconds)
     }
     
-    
-    
-    
-
-
-
+    func timerOver() {
+        print("timer ended")
+        let newAnimal = Animal.randomAnimal()
+        delegate?.timerDidCompleteWithNewAnimal(newAnimal)
+    }
 }
