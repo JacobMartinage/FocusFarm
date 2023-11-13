@@ -45,11 +45,13 @@ FocusFarm is a minimalistic pomodoro timer app that allows users to build a farm
 
 **Optional Nice-to-have Stories**
 
-- [ ] 3D Interactive farm with users animals
-- [ ]3D model for each animal
+
+- [ ] Data persists locally
+- [ ] 3D model for each animal
 - [ ] Detail view for each animal
 - [ ] Track if user leaves app and if so animal doesnt hatch
 - [ ] Payment system (user agrees to if they dont complete the study session __ dollars will be donated to ___)
+- [ ] 3D Interactive farm with users animals
 - [ ] Add different color eggs
 
 ##Current Progress
@@ -59,6 +61,7 @@ FocusFarm is a minimalistic pomodoro timer app that allows users to build a farm
 - Timer is able to be started and stopped, and when timer is running the slider gets locked so that you cant change its time
 - Egg images now correctly progress as the timer gets lower (full at the start, then 1 crack, then 2 cracks, etc..)
 - Succesfully connected the TimerViewController to the FarmViewController and made it so that when the timer hits zero, a random animal is generated (currently just 1/4 possible choices), and then added to the table in the FarmViewController
+- FarmViewController 
   
 
   
