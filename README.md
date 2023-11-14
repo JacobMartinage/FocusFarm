@@ -31,22 +31,28 @@ FocusFarm is a minimalistic pomodoro timer app that allows users to build a farm
 
 ## Product Spec
 
-### 1. User Stories (Required and Optional)
+### 1. Features (Required and Optional)
 
-**Required Must-have Stories**
+**Required Must-have Features**
 
-- [x] Tiner screen
-- [x] Timer is able to be changed (beteen 10 and 120 minutes or something similar)
-- [x] Timer is able to be started and stopped
+- [x] Tiner
+- [x] Egg image that gets more cracked as time gets lower
+- [x] Timer is able to be changed using a slider
+- [x] Timer is able to be started and reset (there is purposefully no pause)
+- [x] Timer resets after going off
 - [x] Timer going off adds an animal to the "farm"
+- [x] Multiple animals available to be added
 - [x] Farm screen that has a table of the obtained animals
 
   
 
-**Optional Nice-to-have Stories**
+**Optional Nice-to-have Features**
 
 
-- [ ] Data persists locally
+- [x] Data persists locally
+- [x] Timer going off plays a sound
+- [x] Timer going off produced an alert/popup
+- [x] When user clicks ok on alert sound stops
 - [ ] 3D model for each animal
 - [ ] Detail view for each animal
 - [ ] Track if user leaves app and if so animal doesnt hatch
@@ -61,7 +67,9 @@ FocusFarm is a minimalistic pomodoro timer app that allows users to build a farm
 - Timer is able to be started and stopped, and when timer is running the slider gets locked so that you cant change its time
 - Egg images now correctly progress as the timer gets lower (full at the start, then 1 crack, then 2 cracks, etc..)
 - Succesfully connected the TimerViewController to the FarmViewController and made it so that when the timer hits zero, a random animal is generated (currently just 1/4 possible choices), and then added to the table in the FarmViewController
-- FarmViewController 
+- The animals array is now stored in userdefaults, allowing users to build their farm over many study sessions
+- When the timer hits zero, the timer now gets properly resets, a sound plays, and an alert pops up notifing the user that their study session is over and they have a new animals in their farm
+  
   
 
   
