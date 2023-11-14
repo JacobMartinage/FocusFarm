@@ -70,7 +70,14 @@ FocusFarm is a minimalistic pomodoro timer app that allows users to build a farm
 - The animals array is now stored in userdefaults, allowing users to build their farm over many study sessions
 - When the timer hits zero, the timer now gets properly resets, a sound plays, and an alert pops up notifing the user that their study session is over and they have a new animals in their farm
   
-  
+  11/13 Video update:
+  <div>
+    <a href="https://www.loom.com/share/30b36ccd5b8840109638312c3ef172f5">
+    </a>
+    <a href="https://www.loom.com/share/30b36ccd5b8840109638312c3ef172f5">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/30b36ccd5b8840109638312c3ef172f5-with-play.gif">
+    </a>
+  </div>
 
   
 
