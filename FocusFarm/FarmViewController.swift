@@ -2,7 +2,7 @@
 
 import UIKit
 
-struct Animal {
+struct Animal : Codable {
     var name: String
     var image: String
     
@@ -60,6 +60,7 @@ class FarmViewController: UIViewController, UITableViewDataSource, TimerViewCont
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        loadAnimals()
         tableView.reloadData()
     }
 
@@ -71,7 +72,24 @@ class FarmViewController: UIViewController, UITableViewDataSource, TimerViewCont
         let animal = animals[0]
         print(animal.name)
         print(animal.image)
+        
+        saveAnimals()
         tableView.reloadData()
         
+    }
+    
+    // Load animals from UserDefaults
+    private func loadAnimals() {
+        if let data = UserDefaults.standard.data(forKey: "animals"),
+            let decodedAnimals = try? JSONDecoder().decode([Animal].self, from: data) {
+            animals = decodedAnimals
+        }
+    }
+
+    // Save animals to UserDefaults
+    private func saveAnimals() {
+        if let encodedData = try? JSONEncoder().encode(animals) {
+            UserDefaults.standard.set(encodedData, forKey: "animals")
+        }
     }
 }
