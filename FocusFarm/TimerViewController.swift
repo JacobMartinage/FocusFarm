@@ -1,6 +1,7 @@
 // TimerViewController.swift
 
 import UIKit
+import AVFoundation
 
 protocol TimerViewControllerDelegate: AnyObject {
     func timerDidCompleteWithNewAnimal(_ newAnimal: Animal)
@@ -32,7 +33,21 @@ class TimerViewController: UIViewController {
         if i == 0 {
             newImage = UIImage(named: "fullEgg")!
         }
-        // ... your existing code ...
+        if i == 1 {
+            newImage = UIImage(named: "StageOne")!
+        }
+        
+        if i == 2 {
+            newImage = UIImage(named:"StageTwo")!
+        }
+        
+        if i == 3 {
+            newImage = UIImage(named: "StageThree")!
+        }
+        
+        if i == 4 {
+            newImage = UIImage(named: "StageFour")!
+        }
         eggImage.image = newImage
     }
     
@@ -55,7 +70,15 @@ class TimerViewController: UIViewController {
         if initialTime/4 > seconds {
             updateEggImage(i: 4)
         }
-        // ... your existing code ...
+        else if initialTime/3 > seconds {
+            updateEggImage(i: 3)
+        }
+        else if initialTime/2 > seconds {
+            updateEggImage(i: 2)
+        }
+        else if (initialTime/2+initialTime/4) > seconds {
+            updateEggImage(i: 1)
+        }
     }
     
     @IBAction func sliderChanged(_ sender: Any) {
@@ -89,7 +112,45 @@ class TimerViewController: UIViewController {
     
     func timerOver() {
         print("timer ended")
+        isTimerRunning = false
+        timerSlider.isUserInteractionEnabled = true
+        seconds = Int(timerSlider.value * 60)
+        updateEggImage(i:0)
+        timerLabel.text = timeString(time: Double(timerSlider.value) * 60)
         let newAnimal = Animal.randomAnimal()
         delegate?.timerDidCompleteWithNewAnimal(newAnimal)
+        // Show alert
+        showAlert()
+        print("alart should have been shown")
+
+        // Play sound
+        playSound()
+        
+    }
+    
+    private func showAlert() {
+        let alertController = UIAlertController(title: "New Animal!",
+                                                message: "You've got a new animal!",
+                                                preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(okAction)
+        
+    }
+    var audioPlayer: AVAudioPlayer?
+    
+    // Play sound method
+    private func playSound() {
+        guard let soundURL = Bundle.main.url(forResource: "alarm", withExtension: "mp3") else {
+                print("Error: Sound file not found")
+                return
+            }
+
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: soundURL)
+            audioPlayer?.play()
+        } catch {
+            print("Error playing sound: \(error.localizedDescription)")
+        }
     }
 }

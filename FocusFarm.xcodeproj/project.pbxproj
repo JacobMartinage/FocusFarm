@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5303E3CF2AFBED2900C5B254 /* fullEgg.png in Resources */ = {isa = PBXBuildFile; fileRef = 5303E3CE2AFBED2900C5B254 /* fullEgg.png */; };
 		53192C0D2AFF4B92008D9694 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53192C0C2AFF4B92008D9694 /* TimerViewController.swift */; };
 		53192C112B01869F008D9694 /* FarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53192C102B01869F008D9694 /* FarmViewController.swift */; };
 		53192C132B019BA1008D9694 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53192C122B019BA1008D9694 /* MainTabBarController.swift */; };
@@ -41,7 +40,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5303E3CE2AFBED2900C5B254 /* fullEgg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fullEgg.png; path = ../../../Downloads/fullEgg.png; sourceTree = "<group>"; };
 		53192C0C2AFF4B92008D9694 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		53192C102B01869F008D9694 /* FarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmViewController.swift; sourceTree = "<group>"; };
 		53192C122B019BA1008D9694 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
@@ -118,7 +116,6 @@
 				53FECCE72AFC9884004DD593 /* AnimalCell.swift */,
 				53E9E3952AF2FC8E0003E33F /* Main.storyboard */,
 				53E9E3982AF2FC8E0003E33F /* Assets.xcassets */,
-				5303E3CE2AFBED2900C5B254 /* fullEgg.png */,
 				53E9E39A2AF2FC8E0003E33F /* LaunchScreen.storyboard */,
 				53E9E39D2AF2FC8E0003E33F /* Info.plist */,
 			);
@@ -246,7 +243,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5303E3CF2AFBED2900C5B254 /* fullEgg.png in Resources */,
 				53E9E39C2AF2FC8E0003E33F /* LaunchScreen.storyboard in Resources */,
 				53E9E3992AF2FC8E0003E33F /* Assets.xcassets in Resources */,
 				53E9E3972AF2FC8E0003E33F /* Main.storyboard in Resources */,
