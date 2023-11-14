@@ -10,6 +10,7 @@
 		53192C0D2AFF4B92008D9694 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53192C0C2AFF4B92008D9694 /* TimerViewController.swift */; };
 		53192C112B01869F008D9694 /* FarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53192C102B01869F008D9694 /* FarmViewController.swift */; };
 		53192C132B019BA1008D9694 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53192C122B019BA1008D9694 /* MainTabBarController.swift */; };
+		53192C152B030DBD008D9694 /* alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 53192C142B030DBD008D9694 /* alarm.mp3 */; };
 		53E9E3902AF2FC8E0003E33F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E9E38F2AF2FC8E0003E33F /* AppDelegate.swift */; };
 		53E9E3922AF2FC8E0003E33F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E9E3912AF2FC8E0003E33F /* SceneDelegate.swift */; };
 		53E9E3942AF2FC8E0003E33F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E9E3932AF2FC8E0003E33F /* ViewController.swift */; };
@@ -43,6 +44,7 @@
 		53192C0C2AFF4B92008D9694 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		53192C102B01869F008D9694 /* FarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmViewController.swift; sourceTree = "<group>"; };
 		53192C122B019BA1008D9694 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		53192C142B030DBD008D9694 /* alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = alarm.mp3; path = ../../../Downloads/alarm.mp3; sourceTree = "<group>"; };
 		53E9E38C2AF2FC8E0003E33F /* FocusFarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FocusFarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53E9E38F2AF2FC8E0003E33F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53E9E3912AF2FC8E0003E33F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 		53E9E38E2AF2FC8E0003E33F /* FocusFarm */ = {
 			isa = PBXGroup;
 			children = (
+				53192C142B030DBD008D9694 /* alarm.mp3 */,
 				53192C122B019BA1008D9694 /* MainTabBarController.swift */,
 				53E9E38F2AF2FC8E0003E33F /* AppDelegate.swift */,
 				53E9E3912AF2FC8E0003E33F /* SceneDelegate.swift */,
@@ -243,6 +246,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53192C152B030DBD008D9694 /* alarm.mp3 in Resources */,
 				53E9E39C2AF2FC8E0003E33F /* LaunchScreen.storyboard in Resources */,
 				53E9E3992AF2FC8E0003E33F /* Assets.xcassets in Resources */,
 				53E9E3972AF2FC8E0003E33F /* Main.storyboard in Resources */,

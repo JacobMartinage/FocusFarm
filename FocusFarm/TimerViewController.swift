@@ -133,8 +133,13 @@ class TimerViewController: UIViewController {
                                                 message: "You've got a new animal!",
                                                 preferredStyle: .alert)
         
-        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+                // Stop the sound when OK is pressed
+            self.stopSound()
+            }
         alertController.addAction(okAction)
+        
+        present(alertController, animated: true, completion: nil)
         
     }
     var audioPlayer: AVAudioPlayer?
@@ -153,4 +158,10 @@ class TimerViewController: UIViewController {
             print("Error playing sound: \(error.localizedDescription)")
         }
     }
+    
+    private func stopSound() {
+        audioPlayer?.stop()
+        audioPlayer = nil // Release the audio player to free up resources
+    }
+    
 }
